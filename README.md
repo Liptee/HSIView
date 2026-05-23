@@ -1,11 +1,19 @@
+<div align="center">
+  <img src="Media/images/HSIView-icon.png" width="128" alt="HSIView app icon" />
+  <h1>HSIView</h1>
+  <p>Native macOS app for hyperspectral imaging workflows</p>
+
+![macOS 15.0+](https://img.shields.io/badge/macOS-15.0%2B-555555?style=flat-square&logo=apple&logoColor=white)
+![Apple Silicon only](https://img.shields.io/badge/Apple%20Silicon-only-555555?style=flat-square&logo=apple&logoColor=white)
+![HSIView](https://img.shields.io/badge/HSIView-0.8.2-blue?style=flat-square)
+</div>
+
+---
+
 # What is HSIView
 HSIView is a native macOS desktop application for hyperspectral imaging workflows: it lets user open, visualize, analyze, process, and export hyperspectral images in common formats. It is for hyperspectral imaging practitioners who need practical day-to-day data work in one tool, such as remote sensing specialists, research engineers, data analysts, and applied scientists working with spectral data.
 
 It started as a lightweight app for fast hypespectral file preview. Over time, it evolved as more and more tasks that were previously handled with Python scripts were brought directly into the product. This led to its core philosophy: *any routine hyperspectral task should be possible inside one application*. Today, HSIView is built to reduce code-heavy workflows and let users process, analyze, and export hyperspectral data with minimal scripting.
-
-# System Requirements
-- HSIView requires **macOS 15.0 or later** and runs on **Apple Silicon Macs only**.
-- For optional custom `Python` pipeline operations, install Python3 with `NumPy`
 
 # Installation from GitHub
 1. Open the project repository on GitHub.
@@ -48,3 +56,11 @@ You can tune the parameters, and reuse the same logic for others datasets in you
 ![Custom processing with Python](Media/gifs/custom_process.gif)
 
 HSIView also support **custom Python-based operation**: you can define your own processing function and run it as part of the pipeline (with Python 3 interpretator). 
+
+## Visualize data with color modes
+
+HSIView provides two complementary color synthesis modes for HSI:
+![Custom processing with Python](Media/images/RGB.png)
+1. Discrete RGB synthesis (band-based): you assign specific spectral bands to the RGB channels.
+![Custom processing with Python](Media/images/RW-RGB.png)
+2. Range-wide RGB (interval-based): instead of single bands, you define wavelengths ranges for each RGB channel.
