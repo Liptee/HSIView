@@ -24,3 +24,27 @@ You can also allow it in `System Settings -> Privacy & Security`.
 ![Opening HSI files from Finder](Media/gifs/FileOpen.gif)
 
 You can open HSI file directrly from **Finder**, which makes everyday work much faster. Supported formats include: `npy`, `mat`, `tiff`, `dat/img/bsq/bil/raw + hdr`, `hsiv`.
+
+## Process HS data with a reproducible pipeline
+![Pipeline process](Media/gifs/process.gif)
+
+**HSIView** includes a built-it processing pipeline so you can apply preprocessing and transformation steps directrly in the app. Operations are configured in the UI and applied in sequence to the current cube, which makes processing transparent and repetable across multiple files.
+
+Processing operations include:
+- radiometric calibration
+- atmosperic correction
+- normalization operations
+- data type conversion
+- masking data
+- clipping values
+- transformations (rotation, resize, crop, transpose)
+- chanell trimming
+- spectral interpolation
+- PCA
+- per-channel homography
+
+You can tune the parameters, and reuse the same logic for others datasets in your library.
+
+![Custom processing with Python](Media/gifs/custom_process.gif)
+
+HSIView also support **custom Python-based operation**: you can define your own processing function and run it as part of the pipeline (with Python 3 interpretator). 
