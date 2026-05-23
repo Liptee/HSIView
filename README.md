@@ -10,12 +10,12 @@
 
 ---
 
-# What is HSIView
+## What is HSIView
 HSIView is a native macOS desktop application for hyperspectral imaging workflows: it lets user open, visualize, analyze, process, and export hyperspectral images in common formats. It is for hyperspectral imaging practitioners who need practical day-to-day data work in one tool, such as remote sensing specialists, research engineers, data analysts, and applied scientists working with spectral data.
 
 It started as a lightweight app for fast hypespectral file preview. Over time, it evolved as more and more tasks that were previously handled with Python scripts were brought directly into the product. This led to its core philosophy: *any routine hyperspectral task should be possible inside one application*. Today, HSIView is built to reduce code-heavy workflows and let users process, analyze, and export hyperspectral data with minimal scripting.
 
-# Installation from GitHub
+## Installation from GitHub
 1. Open the project repository on GitHub.
 2. Go to the Releases section.
 3. Select the latest stable release.
@@ -27,13 +27,13 @@ It started as a lightweight app for fast hypespectral file preview. Over time, i
 If macOS blocks the first launch, right-click **HSIView.app** and choose **Open**, then confirm.
 You can also allow it in `System Settings -> Privacy & Security`.
 
-# What can you do?
-## Open HSI with common extensions
+## What can you do?
+### Open HSI with common extensions
 ![Opening HSI files from Finder](Media/gifs/FileOpen.gif)
 
 You can open HSI file directrly from **Finder**, which makes everyday work much faster. Supported formats include: `npy`, `mat`, `tiff`, `dat/img/bsq/bil/raw + hdr`, `hsiv`.
 
-## Process HS data with a reproducible pipeline
+### Process HS data with a reproducible pipeline
 ![Pipeline process](Media/gifs/process.gif)
 
 **HSIView** includes a built-it processing pipeline so you can apply preprocessing and transformation steps directrly in the app. Operations are configured in the UI and applied in sequence to the current cube, which makes processing transparent and repetable across multiple files.
@@ -57,10 +57,24 @@ You can tune the parameters, and reuse the same logic for others datasets in you
 
 HSIView also support **custom Python-based operation**: you can define your own processing function and run it as part of the pipeline (with Python 3 interpretator). 
 
-## Visualize data with color modes
+### Visualize data with color modes
 
 HSIView provides two complementary color synthesis modes for HSI:
-![Custom processing with Python](Media/images/RGB.png)
 1. Discrete RGB synthesis (band-based): you assign specific spectral bands to the RGB channels.
-![Custom processing with Python](Media/images/RW-RGB.png)
+![Custom processing with Python](Media/images/RGB.png)
+
 2. Range-wide RGB (interval-based): instead of single bands, you define wavelengths ranges for each RGB channel.
+![Custom processing with Python](Media/images/RW-RGB.png)
+
+### Work with spectra
+![Pipeline process](Media/images/spectra.png)
+HSIView provides a full in-app workflow for spectral analysis. You can extract spectra from:
+- single pixel;
+- ROI regions;
+- mask layers.
+
+All extracted spectra are managed in the **Graph Window**, where you can compare multiple curves from the current HSI and from saved library entries.
+
+For sharing and reporring, spectra can be exported as: `JSON` and `PNG`.
+
+HSIView also includes a built-in spectral reference library and supports saving your own spectra as favorites, so you can quickly reuse reference signatures across sessions and datasets.
