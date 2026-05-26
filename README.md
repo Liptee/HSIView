@@ -90,3 +90,19 @@ All extracted spectra are managed in the **Graph Window**, where you can compare
 For sharing and reporting, spectra can be exported as `JSON` or `PNG`.
 
 HSIView also includes a built-in spectral reference library and supports saving your own spectra as favorites, so you can quickly reuse reference signatures across sessions and datasets.
+
+### Find and download Satelite data
+![Custom processing with Python](Media/gifs/satelite_search.gif)
+
+You do not need a separate browser or scripting workflow to get satellite data into HSIView. The app includes a built-in search tool for **Sentinel-2** and **Landsat** scenes:
+- define an search area on the map
+- filter by date, and cloud limit parameters
+- preview candidate scenes before download
+- choose selected channels
+- download selected products directly into your library
+
+The search UI is designed for everyday remote sensing work: narrow results quickly, compare options side by side, and start a download without leaving the application. Once a scene is on disk, you can open it like any other dataset and continue with visualization, processing, and spectral analysis in the same workspace.
+
+### Assemble satellite scenes with Assembler
+
+Individual tiles are often enough for a local study, but larger sites usually require a continuous mosaic. For that, HSIView provides **Assembler**: an in-app tool for stitching downloaded **Sentinel-2** and **Landsat** scenes into a single composite ready for further work in the pipeline and spectral tools described above.
